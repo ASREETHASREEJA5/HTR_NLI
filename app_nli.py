@@ -48,7 +48,7 @@ def load_model():
 def load_llm():
     return ChatGroq(
         temperature=0,
-        groq_api_key='xxxx',
+        groq_api_key= os.getenv('groq_api_key'),
         model_name="llama-3.3-70b-versatile"
     )
 
@@ -310,4 +310,5 @@ if uploaded_file:
             os.remove(st.session_state["temp_file_path"])
             del st.session_state["temp_file_path"]
         except PermissionError:
+
             st.warning("Temporary file is still in use and cannot be removed.")
