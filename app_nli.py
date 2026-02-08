@@ -1,7 +1,7 @@
 import streamlit as st
 from transformers import AutoModel
 from numpy.linalg import norm
-from langchain.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import PyPDFLoader
 from langchain.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
@@ -312,3 +312,4 @@ if uploaded_file:
         except PermissionError:
 
             st.warning("Temporary file is still in use and cannot be removed.")
+
