@@ -5,6 +5,8 @@ streamlit>=1.32.0
 transformers>=4.38.0
 torch>=2.1.0
 sentencepiece>=0.1.99
+langchain-text-splitters>=0.0.1
+
 
 # Embeddings
 huggingface-hub>=0.20.0
@@ -30,3 +32,4 @@ nltk>=3.8.1
 # Utilities
 uuid>=1.30
 regex>=2023.12.25
+
