@@ -5,8 +5,7 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
-
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 import tempfile
 import os
 import numpy as np
@@ -312,6 +311,7 @@ if uploaded_file:
         except PermissionError:
 
             st.warning("Temporary file is still in use and cannot be removed.")
+
 
 
 
