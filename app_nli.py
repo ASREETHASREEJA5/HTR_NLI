@@ -9,7 +9,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 import tempfile
 import os
 import numpy as np
-from langchain.schema import Document
+from langchain_core.documents import Document
 import base64
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
@@ -311,6 +311,7 @@ if uploaded_file:
         except PermissionError:
 
             st.warning("Temporary file is still in use and cannot be removed.")
+
 
 
 
